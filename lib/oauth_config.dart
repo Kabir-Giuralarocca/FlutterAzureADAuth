@@ -20,6 +20,7 @@ class OauthConfig {
     scope: "User.Read",
     navigatorKey: navigatorKey,
     redirectUri: redirectUri,
+    webUseRedirect: false,
     loader: const Center(child: CircularProgressIndicator()),
   );
 

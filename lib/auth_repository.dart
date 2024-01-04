@@ -8,7 +8,7 @@ class AuthRepository {
     try {
       final result = await OauthConfig.aadOAuth.login();
       result.fold(
-        (failure) => log.e(failure),
+        (failure) => throw Exception(failure.message),
         (token) => log.i(
           'Logged in successfully, your access token: ${token.accessToken}',
         ),
@@ -17,7 +17,7 @@ class AuthRepository {
       return token;
     } catch (e) {
       log.e(e);
-      return null;
+      rethrow;
     }
   }
 
