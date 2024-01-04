@@ -21,7 +21,6 @@ class OauthConfig {
     navigatorKey: navigatorKey,
     redirectUri: redirectUri,
     webUseRedirect: false,
-    loader: const Center(child: CircularProgressIndicator()),
   );
 
   static final AadOAuth aadOAuth = AadOAuth(config);

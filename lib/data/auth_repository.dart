@@ -1,10 +1,10 @@
-import 'package:flutter_azure_ad_auth/oauth_config.dart';
+import 'package:flutter_azure_ad_auth/domain/oauth_config.dart';
 import 'package:logger/logger.dart';
 
 class AuthRepository {
   static var log = Logger();
 
-  static Future<String?> azureLogin() async {
+  Future<String?> azureLogin() async {
     try {
       final result = await OauthConfig.aadOAuth.login();
       result.fold(
@@ -21,7 +21,7 @@ class AuthRepository {
     }
   }
 
-  static Future<void> azureLogout() async {
+  Future<void> azureLogout() async {
     await OauthConfig.aadOAuth.logout();
   }
 }

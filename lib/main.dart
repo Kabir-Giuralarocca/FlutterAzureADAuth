@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_azure_ad_auth/access_screen.dart';
-import 'package:flutter_azure_ad_auth/oauth_config.dart';
+import 'package:flutter_azure_ad_auth/domain/oauth_config.dart';
+import 'package:flutter_azure_ad_auth/ui/auth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Azure AD Authentication',
       theme: ThemeData.dark(useMaterial3: true),
       navigatorKey: OauthConfig.navigatorKey,
-      home: const AccessScreen(),
+      home: const AuthScreen(),
     );
   }
 }
