@@ -4,7 +4,7 @@ import 'package:logger/logger.dart';
 class AuthRepository {
   static var log = Logger();
 
-  Future<String?> azureLogin() async {
+  Future<void> azureLogin() async {
     try {
       final result = await OauthConfig.aadOAuth.login();
       result.fold(
@@ -13,8 +13,6 @@ class AuthRepository {
           'Logged in successfully, your access token: ${token.accessToken}',
         ),
       );
-      final token = await OauthConfig.aadOAuth.getAccessToken();
-      return token;
     } catch (e) {
       log.e(e);
       rethrow;
