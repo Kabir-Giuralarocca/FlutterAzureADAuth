@@ -86,9 +86,10 @@ class _AuthLayoutState extends State<AuthLayout> {
                     widget.token,
                     maxLines: 4,
                     overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: Colors.grey,
-                        ),
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall
+                        ?.copyWith(color: Colors.grey),
                   ),
                 ],
               ),
@@ -116,9 +117,10 @@ class _AuthLayoutState extends State<AuthLayout> {
               visible: widget.state is Error,
               child: Text(
                 widget.error,
-                style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                      color: Colors.red,
-                    ),
+                style: Theme.of(context)
+                    .textTheme
+                    .labelMedium
+                    ?.copyWith(color: Colors.red),
               ),
             ),
           ],
