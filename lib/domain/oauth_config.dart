@@ -8,7 +8,7 @@ class OauthConfig {
 
   static String get redirectUri {
     if (kIsWeb) {
-      return "https://flutteraad.azurewebsites.net/";
+      return "https://flutteraad.azurewebsites.net";
     } else {
       return "https://login.live.com/oauth20_desktop.srf";
     }
